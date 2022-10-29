@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS</title>
+</head>
+
+<body>
+
+    <div class="cruds">
+        <div class="head">
+            <h1>cruds</h1>
+            <p>product management system</p>
+            <button id="local"> Delete </button>
+        </div>
+        <div class="input">
+            <input placeholder="title" type="text" id="title">
+            <div class="price">
+                <input onkeyup="getTitle()" placeholder="price" type="number" id="price">
+                <input onkeyup="getTitle()" placeholder="taxes" type="number" id="taxes">
+                <input onkeyup="getTitle()" placeholder="ads" type="number" id="ads">
+                <input onkeyup="getTitle()" placeholder="discount" type="number" id="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">create</button>
+        </div>
+        <div class="output">
+            <div class="searchBlock">
+                <!-- <br> -->
+                <input onkeyup="searchData(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getSearch(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearch(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+                
+                <div id="deleteAll">
+
+                </div>
+                <hr>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <td>id</td>
+                            <td>title</td>
+                            <td>price</td>
+                            <td>taxes</td>
+                            <td>ads</td>
+                            <td>discount</td>
+                            <td>total</td>
+                            <td>category</td>
+                            <td>update</td>
+                            <td>delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
